@@ -23,11 +23,20 @@ BEGIN; SET TRANSACTION AS OF SYSTEM TIME follower_read_timestamp(); SELECT * FRO
 statement ok
 ROLLBACK
 
+statement ok
+SET enable_implicit_transaction_for_batch_statements = true
+
 statement error pgcode 3D000 pq: database "test" does not exist
 BEGIN AS OF SYSTEM TIME follower_read_timestamp(); SELECT * FROM t
 
 statement ok
+RESET enable_implicit_transaction_for_batch_statements
+
+statement ok
 ROLLBACK
+
+statement error pgcode 0A000 cannot specify AS OF SYSTEM TIME with different timestamps
+SELECT * from t AS OF SYSTEM TIME '-1μs'; SELECT * from t AS OF SYSTEM TIME '-2μs'
 
 statement ok
 SET DEFAULT_TRANSACTION_USE_FOLLOWER_READS TO TRUE
