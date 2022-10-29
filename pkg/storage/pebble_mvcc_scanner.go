@@ -283,6 +283,7 @@ func extractResultKey(repr []byte) roachpb.Key {
 
 // Go port of mvccScanner in libroach/mvcc.h. Stores all variables relating to
 // one MVCCGet / MVCCScan call.
+// pebble Scanner
 type pebbleMVCCScanner struct {
 	parent MVCCIterator
 	// memAccount is used to account for the size of the scan results.

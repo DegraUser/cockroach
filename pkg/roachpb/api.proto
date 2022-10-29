@@ -453,6 +453,7 @@ enum ScanFormat {
 // A ScanRequest is the argument to the Scan() method. It specifies the
 // start and end keys for an ascending scan of [start,end) and the maximum
 // number of results (unbounded if zero).
+// my_note scan request
 message ScanRequest {
   reserved 2, 3;
 

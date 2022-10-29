@@ -568,6 +568,7 @@ func (b *Batch) scan(s, e interface{}, isReverse, forUpdate bool) {
 // row is a key/value pair) and Result.Err will indicate success or failure.
 //
 // key can be either a byte slice or a string.
+// my_note Scan
 func (b *Batch) Scan(s, e interface{}) {
 	b.scan(s, e, false /* isReverse */, false /* forUpdate */)
 }

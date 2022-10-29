@@ -617,6 +617,7 @@ func (f *txnKVFetcher) close(ctx context.Context) {
 // a span doesn't have the EndKey set, then a Get request is used for it;
 // otherwise, a Scan (or ReverseScan if reverse is true) request is used with
 // BATCH_RESPONSE format.
+// TODO my_note
 func spansToRequests(
 	spans roachpb.Spans, reverse bool, keyLocking lock.Strength,
 ) []roachpb.RequestUnion {

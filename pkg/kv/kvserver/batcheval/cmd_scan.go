@@ -29,6 +29,7 @@ func init() {
 // in ascending order up to some maximum number of results. maxKeys
 // stores the number of scan results remaining for this batch
 // (MaxInt64 for no limit).
+// my_note real Scan
 func Scan(
 	ctx context.Context, reader storage.Reader, cArgs CommandArgs, resp roachpb.Response,
 ) (result.Result, error) {
