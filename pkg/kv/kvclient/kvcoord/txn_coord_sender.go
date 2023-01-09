@@ -69,6 +69,7 @@ const (
 	txnFinalized
 )
 
+// my_note txn coordinator
 // A TxnCoordSender is the production implementation of client.TxnSender. It is
 // a Sender which wraps a lower-level Sender (a DistSender) to which it sends
 // commands. It works on behalf of the client to keep a transaction's state

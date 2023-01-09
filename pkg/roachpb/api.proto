@@ -2978,6 +2978,7 @@ message JoinNodeResponse {
 }
 
 // Batch and RangeFeed service implemented by nodes for KV API requests.
+// my_note implemented in node.go
 service Internal {
   rpc Batch              (BatchRequest)              returns (BatchResponse)                  {}
   rpc RangeLookup        (RangeLookupRequest)        returns (RangeLookupResponse)            {}

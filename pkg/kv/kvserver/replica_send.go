@@ -96,6 +96,7 @@ var optimisticEvalLimitedScans = settings.RegisterBoolSetting(
 // handleRaftReady        (drives the Raft loop, first appending to the log
 //                         to commit the command, then signaling proposer and
 //                         applying the command)
+// my_note replica handle rpc request BatchRequest
 func (r *Replica) Send(
 	ctx context.Context, ba roachpb.BatchRequest,
 ) (*roachpb.BatchResponse, *roachpb.Error) {
@@ -440,6 +441,7 @@ func (r *Replica) executeBatchWithConcurrencyRetries(
 		// this request completes. After latching, wait on any conflicting locks
 		// to ensure that the request has full isolation during evaluation. This
 		// returns a request guard that must be eventually released.
+		// my_note sequence request
 		var resp []roachpb.ResponseUnion
 		g, resp, pErr = r.concMgr.SequenceReq(ctx, g, concurrency.Request{
 			Txn:             ba.Txn,

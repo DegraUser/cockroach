@@ -91,7 +91,7 @@ import (
 	"google.golang.org/grpc/codes"
 )
 
-// Server is the cockroach server node.
+// Server is the cockroach server node. my_note server core struct
 type Server struct {
 	// The following fields are populated in NewServer.
 

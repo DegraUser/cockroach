@@ -1821,6 +1821,7 @@ var errDrainingComplete = fmt.Errorf("draining done. this is a good time to fini
 // Returns drainingComplete if the session should finish because draining is
 // complete (i.e. we received a DrainRequest - possibly previously - and the
 // connection is found to be idle).
+// my_note get stmtBuf cmd to run
 func (ex *connExecutor) execCmd() error {
 	ctx := ex.Ctx()
 	cmd, pos, err := ex.stmtBuf.CurCmd()

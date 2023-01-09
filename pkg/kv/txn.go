@@ -651,6 +651,7 @@ func (txn *Txn) DelRange(
 	return r.Keys, err
 }
 
+// my_note txn run
 // Run executes the operations queued up within a batch. Before executing any
 // of the operations the batch is first checked to see if there were any errors
 // during its construction (e.g. failure to marshal a proto message).

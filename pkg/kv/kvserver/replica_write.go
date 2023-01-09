@@ -75,6 +75,7 @@ var migrateApplicationTimeout = settings.RegisterDurationSetting(
 // NB: changing BatchRequest to a pointer here would have to be done cautiously
 // as this method makes the assumption that it operates on a shallow copy (see
 // call to applyTimestampCache).
+// my_note do replicate write
 func (r *Replica) executeWriteBatch(
 	ctx context.Context, ba *roachpb.BatchRequest, g *concurrency.Guard,
 ) (br *roachpb.BatchResponse, _ *concurrency.Guard, pErr *roachpb.Error) {

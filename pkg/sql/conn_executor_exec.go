@@ -80,6 +80,7 @@ import (
 // res: Used to produce query results.
 // pinfo: The values to use for the statement's placeholders. If nil is passed,
 // 	 then the statement cannot have any placeholder.
+// my_note exec stmt
 func (ex *connExecutor) execStmt(
 	ctx context.Context,
 	parserStmt parser.Statement,
@@ -263,6 +264,7 @@ func (ex *connExecutor) execPortal(
 // the returned Event.
 //
 // The returned event can be nil if no state transition is required.
+// my_note a real insert sql handler
 func (ex *connExecutor) execStmtInOpenState(
 	ctx context.Context,
 	parserStmt parser.Statement,
@@ -1040,6 +1042,7 @@ func (ex *connExecutor) dispatchToExecutionEngine(
 	}
 	// Prepare the plan. Note, the error is processed below. Everything
 	// between here and there needs to happen even if there's an error.
+	// my_note create plan
 	err := ex.makeExecPlan(ctx, planner)
 	// We'll be closing the plan manually below after execution; this
 	// defer is a catch-all in case some other return path is taken.

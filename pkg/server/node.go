@@ -10,6 +10,8 @@
 
 package server
 
+// my_note server rpc received
+
 import (
 	"bytes"
 	"context"

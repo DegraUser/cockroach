@@ -129,7 +129,7 @@ type Builder struct {
 	// ContainsMutation is set to true if the whole plan contains any mutations.
 	ContainsMutation bool
 }
-
+// my_note planner core code
 // New constructs an instance of the execution node builder using the
 // given factory to construct nodes. The Build method will build the execution
 // node tree from the given optimized expression tree.

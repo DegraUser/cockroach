@@ -234,6 +234,7 @@ func (n *insertNode) BatchedNext(params runParams) (bool, error) {
 
 		// Process the insertion for the current source row, potentially
 		// accumulating the result row for later.
+		// my_note fill batch req
 		if err := n.run.processSourceRow(params, n.source.Values()); err != nil {
 			return false, err
 		}

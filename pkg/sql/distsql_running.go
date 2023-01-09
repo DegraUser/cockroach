@@ -1406,6 +1406,7 @@ func (dsp *DistSQLPlanner) planAndRunSubquery(
 	return nil
 }
 
+// my_note exec tree build
 // PlanAndRun generates a physical plan from a planNode tree and executes it. It
 // assumes that the tree is supported (see CheckSupport).
 //

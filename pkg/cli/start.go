@@ -128,6 +128,7 @@ replication disabled (replication factor = 1).
 	RunE:    clierrorplus.MaybeShoutError(clierrorplus.MaybeDecorateError(runStartSingleNode)),
 }
 
+// my_note start entry
 // StartCmds lists the commands that start KV nodes as a server.
 // This includes 'start' and 'start-single-node' but excludes
 // the MT SQL server (not KV node) and 'demo' (not a server).

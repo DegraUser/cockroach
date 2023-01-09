@@ -3160,6 +3160,7 @@ func (dsp *DistSQLPlanner) wrapPlan(
 	// expecting is in fact RowsAffected. RowsAffected statements return a single
 	// row with the number of rows affected by the statement, and are the only
 	// types of statement where it's valid to invoke a plan's fast path.
+	// my_node current at
 	wrapper, err := makePlanNodeToRowSource(n,
 		runParams{
 			extendedEvalCtx: &evalCtx,

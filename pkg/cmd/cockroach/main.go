@@ -21,7 +21,7 @@ import (
 	"github.com/cockroachdb/cockroach/pkg/cli"
 	_ "github.com/cockroachdb/cockroach/pkg/ui/distccl" // ccl web UI init hook
 )
-
+// my_note main
 func main() {
 	cli.Main()
 }
