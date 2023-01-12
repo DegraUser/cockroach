@@ -39,6 +39,7 @@ var optimisticEvalLimitedScans = settings.RegisterBoolSetting(
 	true,
 )
 
+// my_note send comments
 // Send executes a command on this range, dispatching it to the
 // read-only, read-write, or admin execution path as appropriate.
 // ctx should contain the log tags from the store (and up).

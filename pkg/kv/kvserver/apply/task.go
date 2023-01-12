@@ -239,6 +239,7 @@ func (t *Task) SetMaxBatchSize(size int) {
 
 // ApplyCommittedEntries applies raft entries that have been committed to the
 // raft log but have not yet been applied to the replicated state machine.
+// my_note apply task, run apply action
 func (t *Task) ApplyCommittedEntries(ctx context.Context) error {
 	t.assertDecoded()
 

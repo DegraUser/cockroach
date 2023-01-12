@@ -131,6 +131,7 @@ func (r *Replica) getStateMachine() *replicaStateMachine {
 // the replicated state machine after it has been committed to the Raft log. It
 // then sets the provided command's leaseIndex, proposalRetry, and forcedErr
 // fields and returns whether command should be applied or rejected.
+// my_note apply state machine .go
 func (r *Replica) shouldApplyCommand(
 	ctx context.Context, cmd *replicatedCmd, replicaState *kvserverpb.ReplicaState,
 ) bool {
